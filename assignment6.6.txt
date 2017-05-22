@@ -1,0 +1,21 @@
+1)Explain the difference between FIFO and Capacity scheduler:-
+
+->With the Capacity Scheduler a separate dedicated queue allows the small job to start as soon as it is submitted 
+whereas the FIFO Scheduler places applications in a queue and runs them in the order of submission.
+->In Capacity Scheduler it takes the cost of overall cluster utilization since the queue capacity is reserved for jobs in that queue
+whereas in FIFO Scheduler requests for the first application in the queue are allocated first and then the next application in the queue is served and so on.
+->In Capacity Scheduler if queues are not designed or used properly some queues may be overloaded while some may be underutilised.
+whereas the FIFO Scheduler is not suitable for shared clusters.
+->Large applications will use all the resources in a cluster and so each application has to wait its turn.
+ So on a shared cluster it is better to use the Capacity Scheduler or the Fair Scheduler but large job finishes late when compared with using the FIFO Scheduler. 
+
+2. What are the limitations of hadoop 1.x and how they were overcome in hadoop 2.x?
+
+->Hadoop 1.x is not suitable for real-time data processing whereas hadoop 2.x supports real-time processing of data.
+->Hadoop 1.x is not suitable for data streaming whereas hadoop 2.x enables streaming of data.
+->Hadoop 1.x supports only 4000 nodes per cluster whereas hadoop 2.x supports more than 10000 nodes per cluster.
+->Hadoop 1.x supports one and only one programming model that is the MapReduce whereas 
+Hadoop 2.x supports multiple programming models with YARN Component like MapReduce, Interative, Streaming, Graph, Spark, Storm etc.
+->Hadoop 1.x does not support Multi-tenancy whereas hadoop 2.x supports Multi-tenancy.
+
+
